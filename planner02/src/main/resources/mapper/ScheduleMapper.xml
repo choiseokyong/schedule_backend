@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.planner.cal.mapper.ScheduleMapper">
+	<!--<select id="selectMenuList" resultType="com.onlineplatform.common.model.MenuVO">
+		<![CDATA[ 
+			SELECT * FROM MENU WHERE use_yn = 'Y' ORDER BY no DESC
+		]]>
+	</select>
+	<select id="selectByNo" resultType="com.onlineplatform.common.model.MenuVO">
+		SELECT * FROM MENU WHERE no = #{no}
+	</select>
+	<insert id="insertMenu">
+		INSERT INTO MENU (reg_id, upt_id, rfrnc_no, rfrnc_group, menu_nm, menu_lnkg, mngr_page_rls_yn, user_page_rls_yn, rls_mbr_authrt, use_yn, reg_dt, upt_dt, layer)
+		VALUES (#{emlAddr}, #{emlAddr}, #{mv.rfrnc_no}, #{mv.rfrnc_group}, #{mv.menu_nm}, #{mv.menu_lnkg}, #{mv.mngr_page_rls_yn}, #{mv.user_page_rls_yn}, #{mv.rls_mbr_authrt}, #{mv.use_yn}, now(), now(), #{mv.layer})
+
+	</insert>
+	<delete id="deleteMenu">
+		DELETE FROM MENU WHERE no = #{no}
+	</delete>
+	
+	<update id="updateMenu">
+		UPDATE MENU SET upt_id = #{emlAddr}, rfrnc_no = #{mv.rfrnc_no}, rfrnc_group = #{mv.rfrnc_group}, menu_nm = #{mv.menu_nm}, menu_lnkg = #{mv.menu_lnkg}, 
+		mngr_page_rls_yn = #{mv.mngr_page_rls_yn}, user_page_rls_yn =#{mv.user_page_rls_yn}, rls_mbr_authrt = #{mv.rls_mbr_authrt}, use_yn = #{mv.use_yn}, upt_dt = now(), layer = #{mv.layer}
+		WHERE no = #{mv.no}
+
+	</update>-->
+</mapper>
