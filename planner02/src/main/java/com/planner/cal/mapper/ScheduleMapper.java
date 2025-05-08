@@ -1,5 +1,11 @@
 package com.planner.cal.mapper;
 
-public interface ScheduleMapper {
+import org.apache.ibatis.annotations.Mapper;
 
+import com.planner.cal.model.ScheduleVO;
+
+@Mapper
+public interface ScheduleMapper {
+	// 일정등록
+	public int insertSchedule(ScheduleVO sv);
 }

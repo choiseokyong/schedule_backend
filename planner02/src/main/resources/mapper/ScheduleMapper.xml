@@ -2,6 +2,11 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.planner.cal.mapper.ScheduleMapper">
+	<insert id="insertSchedule">
+		INSERT INTO MENU (title, start_date, end_date, start_time, end_time, location, memo, reminder, repeat, auth, state, category, color, reg_date)
+		VALUES (#{sv.title}, #{sv.startDate}, #{sv.endDate}, #{sv.startTime}, #{sv.endTime}, #{sv.location}, #{sv.memo}, #{sv.reminder}, #{sv.repeat}, #{sv.auth},#{sv.state},#{sv.category},#{sv.color},now())
+
+	</insert>
 	<!--<select id="selectMenuList" resultType="com.onlineplatform.common.model.MenuVO">
 		<![CDATA[ 
 			SELECT * FROM MENU WHERE use_yn = 'Y' ORDER BY no DESC
@@ -10,11 +15,7 @@
 	<select id="selectByNo" resultType="com.onlineplatform.common.model.MenuVO">
 		SELECT * FROM MENU WHERE no = #{no}
 	</select>
-	<insert id="insertMenu">
-		INSERT INTO MENU (reg_id, upt_id, rfrnc_no, rfrnc_group, menu_nm, menu_lnkg, mngr_page_rls_yn, user_page_rls_yn, rls_mbr_authrt, use_yn, reg_dt, upt_dt, layer)
-		VALUES (#{emlAddr}, #{emlAddr}, #{mv.rfrnc_no}, #{mv.rfrnc_group}, #{mv.menu_nm}, #{mv.menu_lnkg}, #{mv.mngr_page_rls_yn}, #{mv.user_page_rls_yn}, #{mv.rls_mbr_authrt}, #{mv.use_yn}, now(), now(), #{mv.layer})
-
-	</insert>
+	
 	<delete id="deleteMenu">
 		DELETE FROM MENU WHERE no = #{no}
 	</delete>

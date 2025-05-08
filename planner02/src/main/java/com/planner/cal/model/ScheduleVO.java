@@ -2,13 +2,13 @@ package com.planner.cal.model;
 
 public class ScheduleVO {
 	private int no;
-	private int team_id;
+	private int teamId;
 	private int owner;
 	private String title;
-	private String start_date;
-	private String end_date;
-	private String start_time;
-	private String end_time;
+	private String startDate;
+	private String endDate;
+	private String startTime;
+	private String endTime;
 	private String location;
 	private String memo;
 	private String reminder;
@@ -17,17 +17,18 @@ public class ScheduleVO {
 	private String state;
 	private String category;
 	private String color;
+	
 	public int getNo() {
 		return no;
 	}
 	public void setNo(int no) {
 		this.no = no;
 	}
-	public int getTeam_id() {
-		return team_id;
+	public int getTeamId() {
+		return teamId;
 	}
-	public void setTeam_id(int team_id) {
-		this.team_id = team_id;
+	public void setTeamId(int teamId) {
+		this.teamId = teamId;
 	}
 	public int getOwner() {
 		return owner;
@@ -41,29 +42,29 @@ public class ScheduleVO {
 	public void setTitle(String title) {
 		this.title = title;
 	}
-	public String getStart_date() {
-		return start_date;
+	public String getStartDate() {
+		return startDate;
 	}
-	public void setStart_date(String start_date) {
-		this.start_date = start_date;
+	public void setStartDate(String startDate) {
+		this.startDate = startDate;
 	}
-	public String getEnd_date() {
-		return end_date;
+	public String getEndDate() {
+		return endDate;
 	}
-	public void setEnd_date(String end_date) {
-		this.end_date = end_date;
+	public void setEndDate(String endDate) {
+		this.endDate = endDate;
 	}
-	public String getStart_time() {
-		return start_time;
+	public String getStartTime() {
+		return startTime;
 	}
-	public void setStart_time(String start_time) {
-		this.start_time = start_time;
+	public void setStartTime(String startTime) {
+		this.startTime = startTime;
 	}
-	public String getEnd_time() {
-		return end_time;
+	public String getEndTime() {
+		return endTime;
 	}
-	public void setEnd_time(String end_time) {
-		this.end_time = end_time;
+	public void setEndTime(String endTime) {
+		this.endTime = endTime;
 	}
 	public String getLocation() {
 		return location;
@@ -113,6 +114,7 @@ public class ScheduleVO {
 	public void setColor(String color) {
 		this.color = color;
 	}
+	
 	
 	
 }
