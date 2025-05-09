@@ -30,7 +30,6 @@ public class ScheduleController {
 	
 	@GetMapping("/scheduleList")
 	public List<ScheduleVO> getScheduleList(@RequestParam String firstday,@RequestParam String lastday) {
-		System.out.println("값:=========" + firstday);
 		return ss.scheduleList(firstday,lastday);
 	}
 	

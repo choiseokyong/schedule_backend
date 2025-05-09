@@ -22,8 +22,6 @@ public class ScheduleService {
 	}
 	
 	public List<ScheduleVO> scheduleList(String firstday,String lastday){
-		
-		System.out.println("값:+++++" + firstday);
 		return sm.scheduleList(firstday,lastday);
 	}
 }
