@@ -2,16 +2,16 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.planner.cal.mapper.ScheduleMapper">
-	<insert id="insertSchedule">
-		INSERT INTO MENU (title, start_date, end_date, start_time, end_time, location, memo, reminder, repeat, auth, state, category, color, reg_date)
-		VALUES (#{sv.title}, #{sv.startDate}, #{sv.endDate}, #{sv.startTime}, #{sv.endTime}, #{sv.location}, #{sv.memo}, #{sv.reminder}, #{sv.repeat}, #{sv.auth},#{sv.state},#{sv.category},#{sv.color},now())
-
+	<insert id="insertSchedule" parameterType="com.planner.cal.model.ScheduleVO">
+		INSERT INTO schedule (title, start_date, end_date, start_time, end_time, location, memo, reminder, `repeat`, auth, state, category, color, reg_date)
+		VALUES (#{title}, #{startDate}, #{endDate}, #{startTime}, #{endTime}, #{location}, #{memo}, #{reminder}, #{repeat}, #{auth},#{state},#{category},#{color},now())
 	</insert>
-	<!--<select id="selectMenuList" resultType="com.onlineplatform.common.model.MenuVO">
+	<select id="scheduleList" resultType="com.planner.cal.model.ScheduleVO">
 		<![CDATA[ 
-			SELECT * FROM MENU WHERE use_yn = 'Y' ORDER BY no DESC
+			SELECT * FROM schedule WHERE start_date >= #{firstday} AND end_date <= #{lastday}
 		]]>
 	</select>
+	<!--
 	<select id="selectByNo" resultType="com.onlineplatform.common.model.MenuVO">
 		SELECT * FROM MENU WHERE no = #{no}
 	</select>

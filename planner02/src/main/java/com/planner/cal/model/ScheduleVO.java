@@ -17,6 +17,7 @@ public class ScheduleVO {
 	private String state;
 	private String category;
 	private String color;
+	private String regDate;
 	
 	public int getNo() {
 		return no;
@@ -114,6 +115,13 @@ public class ScheduleVO {
 	public void setColor(String color) {
 		this.color = color;
 	}
+	public String getRegDate() {
+		return regDate;
+	}
+	public void setRegDate(String regDate) {
+		this.regDate = regDate;
+	}
+	
 	
 	
 	
