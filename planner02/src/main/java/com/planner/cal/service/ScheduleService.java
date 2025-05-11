@@ -1,7 +1,5 @@
 package com.planner.cal.service;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,5 +21,13 @@ public class ScheduleService {
 	
 	public List<ScheduleVO> scheduleList(String firstday,String lastday){
 		return sm.scheduleList(firstday,lastday);
+	}
+	
+	public ScheduleVO getScheduleInfo(int no) {
+		return sm.selectByNo(no);
+	}
+	
+	public int updateSchedule(ScheduleVO sv) {
+		return sm.updateSchedule(sv);
 	}
 }

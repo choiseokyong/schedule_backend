@@ -11,10 +11,16 @@
 			SELECT * FROM schedule WHERE start_date >= #{firstday} AND end_date <= #{lastday}
 		]]>
 	</select>
-	<!--
-	<select id="selectByNo" resultType="com.onlineplatform.common.model.MenuVO">
-		SELECT * FROM MENU WHERE no = #{no}
+	<select id="selectByNo" resultType="com.planner.cal.model.ScheduleVO">
+		SELECT * FROM schedule WHERE no = #{no}
 	</select>
+	<update id="updateSchedule">
+		UPDATE schedule SET title=#{title}, start_date=#{startDate}, end_date=#{endDate}, start_time=#{startTime}, end_time=#{endTime}, location=#{location}, memo=#{memo}, reminder=#{reminder}, `repeat`=#{repeat}, auth=#{auth},state=#{state},category=#{category},color=#{color}
+		WHERE no = #{no}
+
+	</update>
+	<!--
+	
 	
 	<delete id="deleteMenu">
 		DELETE FROM MENU WHERE no = #{no}
